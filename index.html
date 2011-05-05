@@ -1,0 +1,544 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="ja"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="ja"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="ja"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>prez.</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/libs/modernizr-1.7.min.js"></script>
+<script src="js/libs/jquery-1.6.min.js"></script>
+<script src="js/libs/underscore-min.js"></script>
+<script src="js/libs/backbone.js"></script>
+<script src="js/libs/jquery.scrollTo-1.4.2-min.js"></script>
+<script src="js/libs/jquery.overscroll.js"></script>
+<script src="js/libs/jquery.hotkeys.js"></script>
+<script src="js/libs/jquery.tmpl.min.js"></script>
+<script src="js/libs/jquery.transform.js"></script>
+<script src="js/libs/jquery.ui.widget.min.js"></script>
+<script src="js/misc.js"></script>
+<script src="js/mylibs/prez.js"></script>
+<script>
+$($.prez.init);
+</script>
+</head>
+<body><div class="mod-all">
+
+<!--
+====================================================================
+	slide info
+====================================================================
+-->
+<header id="prez-info" class="prez-info">
+	<h1 class="title">"prez." html based rich slide template</h1>
+	<p class="note">The quick brown fox jumps over the lazy dog.</p>
+</header>
+
+<!--
+====================================================================
+	slide pages
+====================================================================
+-->
+<div id="prez-pageStorage">
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page help"><div><div>
+				<h1>Commands</h1>
+				<table>
+					<tr><th>o</th><td>toggle overview</td></tr>
+					<tr><th>j</th><td>next page</td></tr>
+					<tr><th>k</th><td>prev page</td></tr>
+					<tr><th>left key</th><td>prev group</td></tr>
+					<tr><th>right key</th><td>next group</td></tr>
+					<tr><th>up key</th><td>prev page in the same group</td></tr>
+					<tr><th>down key</th><td>next page in the same group</td></tr>
+					<tr><th>0</th><td>first page</td></tr>
+					<tr><th>$</th><td>final page</td></tr>
+				</table>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page title"><div><div>
+				<h1>Slide title</h1>
+				<p>Takeshi Takatsudo<br><a href="http://twitter.com/Takazudo">@Takazudo</a></p>
+			</div></div></section>
+		<!-- .prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+		<div class="prez-page">
+			<section class="mod-page plain"><div><div>
+				<h1>Heading</h1>
+				<p>The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </p>
+				<ul>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ul>
+				<ol>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+					<li>The quick brown fox jumps over the lazy dog.</li>
+				</ol>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+	<div class="prez-group">
+		<div class="prez-page">
+			<section class="mod-page copy"><div><div>
+				<h1>prez.</h1>
+				<p>This presentation was created with "prez."<br> - html based rich slide template.</p>
+				<p><a href="https://github.com/Takazudo/prez.">prez. on gitHub</a></p>
+				<p>Developer: <a href="http://twitter.com/Takazudo">@Takazudo</a></p>
+			</div></div></section>
+		<!-- /.prez-page --></div>
+	<!-- /.prez-group --></div>
+<!-- /#prez-pageStorage --></div>
+
+
+<!--
+====================================================================
+	don't edit the codes below this line
+====================================================================
+-->
+
+<div id="prez-canvas">
+	<div id="prez-canvas-overView"></div>
+	<div id="prez-canvas-presenView"></div>
+</div>
+
+<script id="tmpl-overView" type="text/x-jquery-tmpl">
+	<div class="prez-overView">
+		<header class="prez-overView-hd">
+			<h1>${title}</h1>
+			<p>${note}</p>
+		</header>
+		<div class="prez-overView-bd">
+			<div class="prez-overView-groups">
+				{{each groups}}
+				<div class="prez-overView-group">
+					{{each $value.pages}}
+					<a class="prez-overView-page" href="#page/${$value.pageNum}">
+						<div class="prez-overView-page-main">{{html $value.simpleHtml}}</div>
+						<div class="prez-overView-page-num">${$value.pageNum}</div>
+					</a>
+					{{/each}}
+				</div>
+				{{/each}}
+			</div>
+		</div>
+		<a href="#" class="prez-overView-close">×</a>
+	</div>
+</script>
+
+<script id="tmpl-presenView" type="text/x-jquery-tmpl">
+	<div class="prez-presenView">
+		<div class="prez-presenView-all">
+			{{each groups}}
+				<div class="prez-presenView-group">
+					{{each $value.pages}}
+					<hr class="visuallyhidden" />
+					<div class="prez-presenView-page">
+						<div class="prez-presenView-page-main">{{html $value.html}}</div>
+						<div class="prez-presenView-page-num"><span>${$value.pageNum}</span></div>
+					</div>
+					{{/each}}
+				</div>
+			{{/each}}
+		</div>
+		<a href="#" class="prez-presenView-showOverView">overview (o)</a>
+	</div>
+</script>
+
+<!-- /.mod-all --></div></body>
+</html>
