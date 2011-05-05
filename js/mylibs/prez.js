@@ -574,11 +574,13 @@ $.prez.init = (function(){
 			.bind('end', function(){ $.prez.pager.last(); })
 			.bind('$', function(){ $.prez.pager.last(); })
 			.bind('left', function(){ $.prez.pager.prevGroup(); })
-			.bind('up', function(){ $.prez.pager.prevPageInGroup(); })
 			.bind('right', function(){ $.prez.pager.nextGroup(); })
+			.bind('up', function(){ $.prez.pager.prevPageInGroup(); })
 			.bind('down', function(){ $.prez.pager.nextPageInGroup(); })
 			.bind('j', function(){ $.prez.pager.next(); })
-			.bind('k', function(){ $.prez.pager.prev(); });
+			.bind('k', function(){ $.prez.pager.prev(); })
+			.bind('h', function(){ $.prez.pager.prevGroup(); })
+			.bind('l', function(){ $.prez.pager.nextGroup(); });
 	}
 
 	/* fetch data from DOM */
