@@ -29,7 +29,7 @@ $.prez.models = {
 /* convert '1' to 1 */
 $.prez.utils.numberifyStr = function(str){
 	if(!_.isNumber(str)){
-		str = str*1
+		str = str*1;
 		if(_.isNaN(str)){
 			return false;
 		}
@@ -46,9 +46,7 @@ $.prez.utils.simplifyHtml = function(html){
 		text = '__xxx#xxx__b__xxx#xxx__' + text + '__xxx#xxx__/b__xxx#xxx__';
 		$h1.text(text);
 	});
-	return $div.text()
-		.replace('__xxx#xxx__b__xxx#xxx__','<b>')
-		.replace('__xxx#xxx__/b__xxx#xxx__','</b>');
+	return $div.text().replace('__xxx#xxx__b__xxx#xxx__','<b>').replace('__xxx#xxx__/b__xxx#xxx__','</b>');
 };
 
 /**
@@ -69,7 +67,7 @@ $.prez.keyBinder = (function(){
 		$document.bind('keydown', key, function(){
 			if(!_allowKeyboardAccess){ return; }
 			fn();
-		})
+		});
 		return pub;
 	};
 	return pub;
@@ -250,7 +248,7 @@ $.prez.PageStorage = Backbone.Model.extend({
 		if(nextPage){
 			var otherPages = _.without(this._allPageModels, nextPage);
 			_.each(otherPages, function(page){
-				page.deselect()
+				page.deselect();
 			});
 			nextPage.select();
 			return true;
@@ -262,7 +260,7 @@ $.prez.PageStorage = Backbone.Model.extend({
 	getSelectedPage: function(){
 		return _.detect(this._allPageModels, function(page){
 			return page.get('selected');
-		})
+		});
 	},
 	getNextPageInGroup: function(){
 		var index = this.getSelectedPage().get('pageNum') + 1;
@@ -339,7 +337,7 @@ $.widget('prez.presenView', {
 		/* adjust the groups and pages position */
 		$('.prez-presenView-group', $el).each(function(i){
 			var leftVal = i*100 + '%';
-			var $group = $(this).css('left', leftVal)
+			var $group = $(this).css('left', leftVal);
 			$('.prez-presenView-page', $group).each(function(j){
 				var topVal = j*100 + '%';
 				$(this).css('top', topVal);
@@ -439,7 +437,7 @@ $.widget('prez.overView', {
 	_createPages: function(){
 		var pageModels = $.prez.models.pageStorage.getAllPageModels();
 		var self = this;
-		self._$pages = $()
+		self._$pages = $();
 		$('.prez-overView-page', this.element).each(function(){
 			var $page = $(this).overView_page({
 				model: pageModels.shift()
@@ -501,12 +499,9 @@ $.widget('prez.overView', {
 });
 $.prez.overView.create = function(){
 	var src = '#tmpl-overView';
-	var data = $.extend({},
-		$.prez.models.pageStorage.toJSON(),
-		$.prez.models.info.toJSON()
-	);
+	var data = $.extend({}, $.prez.models.pageStorage.toJSON(), $.prez.models.info.toJSON());
 	return $(src).tmpl(data).overView();
-}
+};
 
 
 /**
@@ -553,11 +548,12 @@ $.prez.init = (function(){
 				group.pages.push({
 					html: $page.html(),
 					simpleHtml: simpleHtml,
-					pageNum: pageNum++,
+					pageNum: pageNum,
 					firstInGroup: (j===0),
 					lastInGroup: (j===$pages.size()-1),
 					selected: (i===0 && j===0) // true if first page
 				});
+				pageNum++;
 			});
 			whole.groups.push(group);
 		});
