@@ -509,7 +509,7 @@ $($.prez.init);
 				<div class="prez-overView-group">
 					{{each $value.pages}}
 					<a class="prez-overView-page" href="#page/${$value.pageNum}">
-						<div class="prez-overView-page-main">{{html $value.simpleHtml}}</div>
+						<div class="prez-overView-page-main">${$value.simpleHtml}</div>
 						<div class="prez-overView-page-num">${$value.pageNum}</div>
 					</a>
 					{{/each}}

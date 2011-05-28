@@ -383,6 +383,9 @@ $.widget('prez.overView_page', {
 	_create: function(){
 		this.widgetEventPrefix = 'page.';
 		var o = this.options;
+		if(!o.model){
+			return;
+		}
 		o.model.bind('change:selected', $.proxy(this._modelSelectChangeHandler, this));
 		this.element.click(function(){
 			setTimeout(function(){
@@ -544,9 +547,10 @@ $.prez.init = (function(){
 			$pages.each(function(j){
 				var $page = $(this);
 				var html = $page.html();
-				var simpleHtml = $.prez.utils.simplifyHtml(html);
+				//var simpleHtml = $.prez.utils.simplifyHtml(html);
+				var simpleHtml = $page.text();
 				group.pages.push({
-					html: $page.html(),
+					html: html,
 					simpleHtml: simpleHtml,
 					pageNum: pageNum,
 					firstInGroup: (j===0),

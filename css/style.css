@@ -200,6 +200,7 @@ a:hover { color:#000; background:#fff }
 	bottom: 0;
 	background:rgba(0,0,0,.8);
 	z-index:9999;
+	overflow:hidden;
 }
 	.prez-overView-hd{
 		padding:1.25em 20px;
@@ -388,6 +389,9 @@ a:hover { color:#000; background:#fff }
 	bottom:0;
 	top:0;
 }
+	.mod-page *{
+		-webkit-transform:translate3d(0,0,0); /* avoid Safari flicker bug */
+	}
 	.mod-page > div{
 		display:table;
 		width:100%;
@@ -421,6 +425,7 @@ a:hover { color:#000; background:#fff }
 			list-style-type:none;
 			margin:0 0 1em;;
 			width:100%;
+			border-collapse:separate;
 		}
 			.mod-page.help th,
 			.mod-page.help td{
